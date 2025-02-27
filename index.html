@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            background-color: #E6C7C2; /* Light marsala background */
+        }
+        h2, h1 {
+            text-align: center;
+            background-color: #773344; /* Dark marsala color */
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Expense Tracker</h1>
+
+    <!-- Text Area: Description of the Web App -->
+    <textarea rows="5" cols="50" readonly>
+This app will help users track their daily expenses and categorize them. Users can view their total expenses over time.
+In future versions, expenses will be stored and categorized automatically.
+    </textarea>
+
+    <h2>New Expense</h2>
+
+    <!-- Form for Input Fields -->
+    <form>
+        <label for="expense-name">Expense Name:</label>
+        <input type="text" id="expense-name" placeholder="Enter expense name">
+        <br><br>
+
+        <label for="expense-amount">Amount ($):</label>
+        <input type="number" id="expense-amount" placeholder="Enter amount">
+        <br><br>
+
+        <label for="expense-category">Category:</label>
+        <select id="expense-category">
+            <option value="Food">Food</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Rent">Rent</option>
+            <option value="Utility Bill">Utility Bill</option>
+            <option value="Transport">Transport</option>
+            <option value="Car Insurance">Car Insurance</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+        <input type="date" id="expenseDate">
+
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <h2>Expense Summary</h2>
+
+    <!-- Output Text Area -->
+    <textarea rows="3" cols="50" readonly>
+Total expenses will be displayed here once added.
+    </textarea>
+
+</body>
+</html>
